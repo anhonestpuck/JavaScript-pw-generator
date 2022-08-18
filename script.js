@@ -23,13 +23,22 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword () {
   // TODO writing code here
-   var characters = "abcdefghijklmnopqrstuvwxyz";
-   var pwLength = ""
-  if (pwLength < 128){
-    pwLength prompt("How many characters?") 
-  }
+  
+   var isUsingLetters = confirm ("Do you want letters?");
+   var pwLength = prompt("how many characters would you like?")
+   var password = ""
    
- 
+   if (isUsingLetters){
+
+    var characterSet = "abcdefghijklmnopqrstuvwxyz(@#$%^&*()"
+    var index = Math.floor(Math.random() * 129)
+    var randomCharacter = characterSet.charAt
+    if (pwLength < 129 || pwLength > 8) {
+      window.alert("Please input a number betwen 8 and 128")
+    }
+  }
+  
+
   }
 
 // Write password to the #password input
