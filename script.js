@@ -22,42 +22,65 @@
 var generateBtn = document.querySelector("#generate");
 
   // var upperCase = "ALPHABET"
-  
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   // var lowerCase = "alphabet"
-
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz"
   // var specCharact = "characters"
-
+  var specCharact = "@#$%^&*()"
   // var numbers = i.e. '1'
+  var numbers = "123456789"
+  var pwPotentials = []
 
-
-function pwOptions() {
+function generatePassword() {
 
   // makeavariabletostoretheuserpwlength = parseInt(prompt here)
-
+  var inputLength = (prompt("How many characters?"))
   // write a conditional statement to check if the input is not a number
-
-  // conditional to check if the input is <8
-
-  // conditional to check if the input is > 128
+    if (isNaN(inputLength)){
+      alert ("please enter a numeric value");
+      return "";
+    }
+  // conditional to check if the input is < 128
+    if (inputLength > 128 || inputLength < 8){
+      alert ("number must be below 128");
+      return "";
+    }
+    console.log(inputLength)
 
   // useconfirm for special characters in a variable
-
+    confirm("would you like to use special characters?") 
+      if (true){
+        pwPotentials.push(specCharact)
+        
+        console.log(pwPotentials)
+      }
   // useconfirm for uppercase in a variable
-
+    confirm("would you like capital letters?")
+    if (true){
+        pwPotentials.push(upperCase)
+        console.log(pwPotentials)
+    }
   // useconfirm for lower case characters in a variable
-
+    confirm("would you like lower case letters?")
+    if (true){
+        pwPotentials.push(lowerCase)
+        console.log(pwPotentials)
+    }
   // useconfirm for numbers in a variable
+    confirm ("would you like to use numbers?")
+    if (true){
+      pwPotentials.push(numbers)
+      console.log(pwPotentials)
+    }
 
-  // conditional statement that handles the event that someone selects nothing
-
-  //  create an object to store user input
-
-      // var objectName = {
-      // place input here
-      // }
+    JSON.stringify(pwPotentials)
+    
+  
 
 
-// return objectName
+    return "";
+   
+
 
 // create a function for getting a random element from the array math.random & math.floor
 
