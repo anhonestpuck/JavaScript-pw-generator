@@ -21,16 +21,66 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword () {
-  // TODO writing code here
-   var upperAndLower = confirm("would you like upper and lower case?")
-   var pwLength = prompt("how many characters would you like?")
-   var pwPossible = ""
-  if (pwLength < 129 || pwLength > 8) {
-    window.alert("Please input a number betwen 8 and 128")
-  }
+  // var upperCase = "ALPHABET"
   
+  // var lowerCase = "alphabet"
+
+  // var specCharact = "characters"
+
+  // var numbers = i.e. '1'
+
+
+function pwOptions() {
+
+  // makeavariabletostoretheuserpwlength = parseInt(prompt here)
+
+  // write a conditional statement to check if the input is not a number
+
+  // conditional to check if the input is <8
+
+  // conditional to check if the input is > 128
+
+  // useconfirm for special characters in a variable
+
+  // useconfirm for uppercase in a variable
+
+  // useconfirm for lower case characters in a variable
+
+  // useconfirm for numbers in a variable
+
+  // conditional statement that handles the event that someone selects nothing
+
+  //  create an object to store user input
+
+      // var objectName = {
+      // place input here
+      // }
+
+
+// return objectName
+
+// create a function for getting a random element from the array math.random & math.floor
+
 }
+
+// function generatePassword () {
+//   // TODO writing code here
+//    var upperAndLower = confirm("would you like upper and lower case?")
+//    var pwLength = prompt("how many characters would you like?")
+//    var pwPossible = ""
+
+//    var letters = "abcdefghijklmnopqrstuvwxyz"
+//    var characterSet = "$@#%^&*()"
+
+//   if (pwLength < 129 || pwLength > 8) {
+//     window.alert("Please input a number betwen 8 and 128")
+//   }
+  
+// }
+
+
+
+
 
 
 
