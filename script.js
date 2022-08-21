@@ -21,70 +21,70 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-  // var upperCase = "ALPHABET"
-  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  // var lowerCase = "alphabet"
-  var lowerCase = "abcdefghijklmnopqrstuvwxyz"
-  // var specCharact = "characters"
-  var specCharact = "@#$%^&*()"
-  // var numbers = i.e. '1'
-  var numbers = "123456789"
-  var pwPotentials = []
+//   // var upperCase = "ALPHABET"
+//   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+//   // var lowerCase = "alphabet"
+//   var lowerCase = "abcdefghijklmnopqrstuvwxyz"
+//   // var specCharact = "characters"
+//   var specCharact = "@#$%^&*()"
+//   // var numbers = i.e. '1'
+//   var numbers = "123456789"
+//   var pwPotentials = []
 
-function generatePassword() {
+// function generatePassword() {
 
-  // makeavariabletostoretheuserpwlength = parseInt(prompt here)
-  var inputLength = (prompt("How many characters?"))
-  // write a conditional statement to check if the input is not a number
-    if (isNaN(inputLength)){
-      alert ("please enter a numeric value");
-      return "";
-    }
-  // conditional to check if the input is < 128
-    if (inputLength > 128 || inputLength < 8){
-      alert ("number must be below 128");
-      return "";
-    }
-    console.log(inputLength)
+//   // makeavariabletostoretheuserpwlength = parseInt(prompt here)
+//   var inputLength = (prompt("How many characters?"))
+//   // write a conditional statement to check if the input is not a number
+//     if (isNaN(inputLength)){
+//       alert ("please enter a numeric value");
+//       return "";
+//     }
+//   // conditional to check if the input is < 128
+//     if (inputLength > 128 || inputLength < 8){
+//       alert ("number must be below 128");
+//       return "";
+//     }
+//     console.log(inputLength)
 
-  // useconfirm for special characters in a variable
-    confirm("would you like to use special characters?") 
-      if (true){
-        pwPotentials.push(specCharact)
+//   // useconfirm for special characters in a variable
+//     confirm("would you like to use special characters?") 
+//       if (true){
+//         pwPotentials.push(specCharact)
         
-        console.log(pwPotentials)
-      }
-  // useconfirm for uppercase in a variable
-    confirm("would you like capital letters?")
-    if (true){
-        pwPotentials.push(upperCase)
-        console.log(pwPotentials)
-    }
-  // useconfirm for lower case characters in a variable
-    confirm("would you like lower case letters?")
-    if (true){
-        pwPotentials.push(lowerCase)
-        console.log(pwPotentials)
-    }
-  // useconfirm for numbers in a variable
-    confirm ("would you like to use numbers?")
-    if (true){
-      pwPotentials.push(numbers)
-      console.log(pwPotentials)
-    }
+//         console.log(pwPotentials)
+//       }
+//   // useconfirm for uppercase in a variable
+//     confirm("would you like capital letters?")
+//     if (true){
+//         pwPotentials.push(upperCase)
+//         console.log(pwPotentials)
+//     }
+//   // useconfirm for lower case characters in a variable
+//     confirm("would you like lower case letters?")
+//     if (true){
+//         pwPotentials.push(lowerCase)
+//         console.log(pwPotentials)
+//     }
+//   // useconfirm for numbers in a variable
+//     confirm ("would you like to use numbers?")
+//     if (true){
+//       pwPotentials.push(numbers)
+//       console.log(pwPotentials)
+//     }
 
-    JSON.stringify(pwPotentials)
+//     JSON.stringify(pwPotentials)
     
   
 
 
-    return "";
+//     return "";
    
 
 
 // create a function for getting a random element from the array math.random & math.floor
 
-}
+// }
 
 // function generatePassword () {
 //   // TODO writing code here
@@ -102,7 +102,30 @@ function generatePassword() {
 // }
 
 
+function generatePassword () {
 
+  // I want a string that is made up of either letters, numbers, and/or special characters;
+  // what do I need?;
+  // I need 4 inputs, 1 for the pw length, 1 for upper case letters, 1 for lower case letters, 1 for special characters, ; 
+
+  // here is the start to my toolbox... I need variables for letters, numbers, and special characters
+  var letters = 'abcdefghijklmnopqrstuvwxyz';
+
+  var symbols = '@#$%^&*()';
+
+  var pwLength = prompt ('how many characters would you like your pw to have?')
+      if (pwLength != Number) {
+        alert ('please enter a numeric value');
+        // this is my sticking point... what sort of conditional, or for statement 
+        // would i use to break the code here and re-run the prompt if the input they return is not a number?
+
+      }
+    console.log (pwLength)  
+  // as far as i know if i use 'Number' as one of the values in the string
+    // here I'm going to enter my prompts/confirms.. first I am going to determine the password length
+    
+  
+}
 
 
 
