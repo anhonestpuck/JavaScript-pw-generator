@@ -113,9 +113,11 @@ function generatePassword () {
 
   var symbols = '@#$%^&*()';
 
-  var pwLength = prompt ('how many characters would you like your pw to have?')
-      if (pwLength != Number) {
+  var pwLength = prompt ('how many characters would you like your pw to have?');
+      if (isNaN(pwLength)) {
         alert ('please enter a numeric value');
+        return;
+      }
         // this is my sticking point... what sort of conditional, or for statement 
         // would i use to break the code here and re-run the prompt if the input they return is not a number?
 
@@ -123,8 +125,8 @@ function generatePassword () {
         // all it does is continue forward with the function and return undefined.
         // all i want is the method or single line of code to make sure that if/when the value returned by the prompt
         // is not a number of some kind, after the alert is given, instead of returning undefined, the same prompt will pop up
-
-      }
+         
+     
     console.log (pwLength)  
   // as far as i know if i use 'Number' as one of the values in the string
     // here I'm going to enter my prompts/confirms.. first I am going to determine the password length
