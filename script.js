@@ -113,11 +113,11 @@ function generatePassword () {
 
   // here is the start to my toolbox... I need variables for letters, numbers, and special characters
   //OBJECT HERE
-    potentialPW = '',
-    letters = 'abcdefghijklmnopqrstuvwxyz',
-    digits = '0123456789',
-    symbols = '@#$%^&*()'
-  
+    potentialPW = [
+      letters = 'abcdefghijklmnopqrstuvwxyz',
+      digits = '0123456789',
+      symbols = '@#$%^&*()'
+    ]
 
 
  
@@ -127,13 +127,10 @@ function generatePassword () {
         alert ('please enter a numeric value');
 
         generatePassword()
-        // this is infuriating. I have worked on this for 3 hours to get this exact thing.
+       
       }
 
-  confirm('would you like capital letters?')
-      if (false){
-        String.concat(potentialPW, letters)
-      }
+  
 
 
   
