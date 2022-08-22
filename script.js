@@ -104,15 +104,24 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword () {
 
+
+    // This function is just going to return an object which is potential passwords.
+  
   // I want a string that is made up of either letters, numbers, and/or special characters;
   // what do I need?;
   // I need 4 inputs, 1 for the pw length, 1 for upper case letters, 1 for lower case letters, 1 for special characters, ; 
 
   // here is the start to my toolbox... I need variables for letters, numbers, and special characters
-  var letters = 'abcdefghijklmnopqrstuvwxyz';
+  //OBJECT HERE
+    potentialPW = '',
+    letters = 'abcdefghijklmnopqrstuvwxyz',
+    digits = '0123456789',
+    symbols = '@#$%^&*()'
+  
 
-  var symbols = '@#$%^&*()';
 
+ 
+  
   var pwLength = prompt ('how many characters would you like your pw to have?');
       if (isNaN(pwLength)) {
         alert ('please enter a numeric value');
@@ -120,6 +129,17 @@ function generatePassword () {
         generatePassword()
         // this is infuriating. I have worked on this for 3 hours to get this exact thing.
       }
+
+  confirm('would you like capital letters?')
+      if (false){
+        String.concat(potentialPW, letters)
+      }
+
+
+  
+
+    
+    
         // this is my sticking point... what sort of conditional, or for statement 
         // would i use to break the code here and re-run the prompt if the input they return is not a number?
 
@@ -130,6 +150,7 @@ function generatePassword () {
          
      
     console.log (pwLength)  
+    console.log (potentialPW)
   // as far as i know if i use 'Number' as one of the values in the string
     // here I'm going to enter my prompts/confirms.. first I am going to determine the password length
     
