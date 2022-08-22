@@ -116,7 +116,9 @@ function generatePassword () {
   var pwLength = prompt ('how many characters would you like your pw to have?');
       if (isNaN(pwLength)) {
         alert ('please enter a numeric value');
-        return;
+
+        generatePassword()
+        // this is infuriating. I have worked on this for 3 hours to get this exact thing.
       }
         // this is my sticking point... what sort of conditional, or for statement 
         // would i use to break the code here and re-run the prompt if the input they return is not a number?
