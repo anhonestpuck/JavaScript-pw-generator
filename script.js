@@ -100,58 +100,45 @@ var generateBtn = document.querySelector("#generate");
 //   }
   
 // }
+var letters = 'abcdefghijklmnopqrstuvwxyz'
 
+var digits = '0123456789';
+var symbols = '@#$%^&*()';
+var potentialPW = '' //I'm trying to concat this meaning i want the value of potentialPw to inherently start out as a string of all my other strings combined
 
+// I have three data sets
+// I want to use concat so that they are all one string.
 function generatePassword () {
 
+  var pwLength = prompt ('how many characters would you like your pw to have?'); 
+    if (isNaN(pwLength)) {
+      alert ('please enter a numeric value');
 
-    // This function is just going to return an object which is potential passwords.
+      generatePassword()
+
+}
+// i'm just going to put in the prompts and go from there
+var confirmCap = confirm('would you like to include capital letters?')
+var confirmSpec = confirm('would you like special characters?')
+var confirmDig = confirm('would you like to include numbers?')
+
+// I cut and pasted and here we go
+
+
+
+
   
-  // I want a string that is made up of either letters, numbers, and/or special characters;
-  // what do I need?;
-  // I need 4 inputs, 1 for the pw length, 1 for upper case letters, 1 for lower case letters, 1 for special characters, ; 
-
-  // here is the start to my toolbox... I need variables for letters, numbers, and special characters
-  //OBJECT HERE
-    potentialPW = [
-    letters = 'abcdefghijklmnopqrstuvwxyz',
-    digits = '0123456789',
-    symbols = '@#$%^&*()'
-    ]
 
 
  
   
-  var pwLength = prompt ('how many characters would you like your pw to have?');
-      if (isNaN(pwLength)) {
-        alert ('please enter a numeric value');
 
-        generatePassword()
-      
-      }
-   
-  
+
+      console.log (pwLength)  
+      console.log (potentialPW)
   
 
-
   
-
-    
-    
-        // this is my sticking point... what sort of conditional, or for statement 
-        // would i use to break the code here and re-run the prompt if the input they return is not a number?
-
-        // each time i use return or break or any other method I've found, 
-        // all it does is continue forward with the function and return undefined.
-        // all i want is the method or single line of code to make sure that if/when the value returned by the prompt
-        // is not a number of some kind, after the alert is given, instead of returning undefined, the same prompt will pop up
-         
-     
-    console.log (pwLength)  
-    console.log (potentialPW)
-  // as far as i know if i use 'Number' as one of the values in the string
-    // here I'm going to enter my prompts/confirms.. first I am going to determine the password length
-    
   
 }
 
