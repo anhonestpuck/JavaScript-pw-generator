@@ -100,45 +100,88 @@ var generateBtn = document.querySelector("#generate");
 //   }
   
 // }
-var letters = 'abcdefghijklmnopqrstuvwxyz'
-
+var lowerLetters = 'abcdefghijklmnopqrstuvwxyz'
+var upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+var potentialPw = '';
 var digits = '0123456789';
 var symbols = '@#$%^&*()';
-var potentialPW = '' //I'm trying to concat this meaning i want the value of potentialPw to inherently start out as a string of all my other strings combined
+//I'm trying to concat this meaning i want the value of potentialPw to inherently start out as a string of all my other strings combined
+// i'm just going to put in the prompts and go from there
+var password = ''
+
+var storedValue = []
 
 // I have three data sets
 // I want to use concat so that they are all one string.
 function generatePassword () {
 
   var pwLength = prompt ('how many characters would you like your pw to have?'); 
-    if (isNaN(pwLength)) {
-      alert ('please enter a numeric value');
 
-      generatePassword()
+  if (isNaN(pwLength)) {
+    alert ('please enter a numeric value');
+    generatePassword();
+    }
+  if (pwLength < 8 && pwLength > 128){
+    alert('number must be between 8-128');
+    generatePassword();
+  }
 
-}
-// i'm just going to put in the prompts and go from there
-var confirmCap = confirm('would you like to include capital letters?')
-var confirmSpec = confirm('would you like special characters?')
-var confirmDig = confirm('would you like to include numbers?')
+  
+
+  var confirmCap = confirm('would you like to include capital letters?');
+
+  if (confirmCap){
+    var random = Math.floor(Math.random() * upperLetters.length);
+    var capChoice = upperLetters[random];
+    storedValue.push(capChoice);
+    potentialPw = potentialPw.concat(capChoice)
+  } else {
+    alert ('oops needs capital letters')
+    generatePassword()
+  }
+  var confirmLow = confirm('would you like to include lowercase letters?');
+
+  if (confirmLow){
+    var random = Math.floor(Math.random() * lowerLetters.length);
+    var lowChoice = lowerLetters[random];
+    storedValue.push(lowChoice);
+    potentialPw = potentialPw.concat(lowChoice);
+  } else {
+    alert ('oops needs lowercase')
+    generatePassword()
+  }
+
+  var confirmSpec = confirm('would you like special characters?');
+  if (confirmSpec){
+    var random = Math.floor(Math.random() * symbols.length);
+    var specChoice = symbols[random];
+    storedValue.push(specChoice);
+    potentialPw = potentialPw.concat(symbols);
+  } else {
+    alert ('oops needs special characters')
+    generatePassword()
+  }
 
 // I cut and pasted and here we go
+var confirmDig = confirm('would you like to include numbers?')
+  if (confirmDig){
+    var random = Math.floor(Math.random() * digits.length);
+    var digitChoice = digits[random];
+    storedValue.push(digitChoice);
+    potentialPw = potentialPw.concat(digits);
+  } else {
+    alert ('oops needs numbers')
+    generatePassword()
+  }
 
+  for (var i = 0; i < pwLength - storedValue.length; i++) {
+    var random =Math.floor(Math.random() * potentialPw.length)
+    password += potentialPw[random];
+  }
 
+  password += storedValue.join('');
+  return password;
 
-
-  
-
-
- 
-  
-
-
-      console.log (pwLength)  
-      console.log (potentialPW)
-  
-
-  
   
 }
 
